@@ -1,0 +1,21 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "sales-workflow-iteration",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-11-25",
+  "workers_dev": true,
+  "observability": {
+    "enabled": true,
+    "logs": {
+      "enabled": true,
+      "invocation_logs": true
+    }
+  },
+  "workflows": [
+    {
+      "name": "sales-workflow",
+      "binding": "SALES_WORKFLOW",
+      "class_name": "SalesWorkflow"
+    }
+  ]
+}
